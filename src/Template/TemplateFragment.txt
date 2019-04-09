@@ -1,0 +1,35 @@
+package $packagename;
+
+import android.content.Context;
+
+import $basepackagename.BaseFragment;
+import $rpackagename.R;
+
+/**
+ * 残梦
+ * Created by dell on $date
+ */
+public class $nameFragment extends BaseFragment<$namePresenter> implements $nameContract.View{
+
+      @Override
+      protected int getContentLayoutId() {
+          return R.layout.$fxmlname;
+      }
+
+     @Override
+     protected $namePresenter createPresenter() {
+         return new $namePresenter(this);
+     }
+
+     @Override
+     public Context getContext() {
+         return getActivity();
+     }
+
+     @Override
+     protected void doOnFinish() {
+         super.doOnFinish();
+         mPresenter.onDestroy();
+     }
+
+}

@@ -1,0 +1,34 @@
+package $packagename;
+
+import android.content.Context;
+import $basepackagename.BaseActivity;
+import $rpackagename.R;
+
+/**
+ * 残梦
+ * Created by dell on $date
+ */
+public class $nameActivity extends BaseActivity<$namePresenter> implements $nameContract.View{
+
+    @Override
+    protected int getContentLayoutId() {
+        return R.layout.$axmlname;
+    }
+
+    @Override
+    protected $namePresenter createPresenter() {
+        return new $namePresenter(this);
+    }
+
+     @Override
+     public Context getContext() {
+           return this;
+     }
+
+    @Override
+    protected void doOnDestroy() {
+        super.doOnDestroy();
+        mPresenter.onDestroy();
+    }
+
+}

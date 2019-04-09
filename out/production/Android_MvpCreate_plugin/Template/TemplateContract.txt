@@ -1,0 +1,19 @@
+package $packagename;
+
+import $basepackagename.BasePresenter;
+import $basepackagename.BaseView;
+
+/**
+ * 残梦
+ * Created by dell on $date
+ */
+public interface $nameContract {
+
+     interface View extends BaseView {
+
+     }
+
+    interface Presenter{
+
+    }
+}

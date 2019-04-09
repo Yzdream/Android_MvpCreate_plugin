@@ -1,0 +1,17 @@
+package $packagename;
+
+public class BasePresenter<V extends BaseView> {
+
+    private CompositeSubscription compositeSubscription;
+
+    private V mvpView;
+
+    public BasePresenter(V mvpView) {
+        this.mvpView = mvpView;
+    }
+
+    public void onDestroy(){
+        if (compositeSubscription!=null&& compositeSubscription.hasSubscriptions())
+            compositeSubscription.unsubscribe();
+    }
+}

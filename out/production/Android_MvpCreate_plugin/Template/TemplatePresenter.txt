@@ -1,0 +1,14 @@
+package $packagename;
+
+import $basepackagename.BasePresenter;
+/**
+ * 残梦
+ * Created by dell on $date
+ */
+public class $namePresenter extends BasePresenter<$nameContract.View> implements $nameContract.Presenter{
+
+    $namePresenter($nameContract.View mvpView) {
+        super(mvpView);
+    }
+
+}
