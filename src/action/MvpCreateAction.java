@@ -73,7 +73,6 @@ public class MvpCreateAction extends AnAction {
         return package_name;
     }
 
-
     /**
      * 初始化Dialog
      */
@@ -107,10 +106,11 @@ public class MvpCreateAction extends AnAction {
             createXmlFile("activity_" + mModuleName.toLowerCase() + ".xml");
             createXmlFile("fragment_" + mModuleName.toLowerCase() + ".xml");
         }
-        createBaseClassFile(CodeType.BaseView);
+        //架构改动  攒不生成
+     /*   createBaseClassFile(CodeType.BaseView);
         createBaseClassFile(CodeType.BasePresenter);
         createBaseClassFile(CodeType.BaseActivity);
-        createBaseClassFile(CodeType.BaseFragment);
+        createBaseClassFile(CodeType.BaseFragment);*/
 
         createClassFile(CodeType.Contract);
         createClassFile(CodeType.Presenter);
